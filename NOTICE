@@ -1,0 +1,13 @@
+# Notices / 声明
+
+RelayPilot is an independent community project. No affiliation, sponsorship or endorsement by OpenAI, xAI, Tencent, Magpie, Cursor or GitHub is claimed.
+RelayPilot 为独立社区项目，不代表上述平台的合作、赞助或官方认可。
+
+The temperature example is user-commissioned AI-assisted project code, extracted from the owner's test repository under the owner's publication instruction. Algorithms and original tests are retained; only the surrounding packaging is new. Historical records describe WorkBuddy coding; GitHub delivery metadata includes cursoragent. Delivery metadata alone cannot establish the complete coding toolchain.
+温度示例为用户委托的 AI 辅助项目代码，依据所有者本次授权从其测试仓库提取，保留算法与原测试。历史记录称 WorkBuddy 编程，GitHub 交付元数据显示 cursoragent；仅靠交付信息不能认定完整编程来源链。
+
+scripts/codex_review.py is a configuration-only extraction of the owner's historical review launcher, with an additional explicit execution opt-in and validation. It retains the original event/JSON parsing and timeout limitations. No third-party application source, executable, model weights, private history, credentials, session or original evidence media is redistributed.
+审查脚本是历史审查启动器的配置隔离副本，增加执行选择与校验，保留原解析和超时限制。不分发第三方应用源码、二进制、权重、私人历史、凭据、会话或原始证据媒体。
+
+MIT covers this repository's own distributable material only. External applications and services retain their licenses and terms. See docs/third-party.md. Report concrete conflicting provenance before any public release.
+MIT 仅覆盖本仓库有权分发的材料，外部应用与服务保留各自条款。具体来源冲突必须在公开前处理。

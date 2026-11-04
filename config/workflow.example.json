@@ -1,0 +1,18 @@
+{
+  "template_kind": "documentation_only_not_a_runtime_schema",
+  "workflow_id": "DEMO-RELAY",
+  "max_tasks": 2,
+  "max_rework_per_task": 1,
+  "review_timeout_seconds": 120,
+  "stages_done": [],
+  "status": "UNVERIFIED",
+  "requested_model": "YOUR_EXISTING_MODEL_ROUTE",
+  "served_model": "UNVERIFIED",
+  "handoff": {
+    "repository": "YOUR_OWNER/YOUR_SANDBOX_REPOSITORY",
+    "baseline_commit": "YOUR_40_CHARACTER_COMMIT_SHA",
+    "branch": "demo-relay",
+    "draft_pr": true
+  },
+  "stop_after_last_authorized_task": true
+}

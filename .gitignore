@@ -1,0 +1,14 @@
+/release-audit/
+/.build/
+/.relaypilot/
+/.superpowers/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.log
+*.jsonl
