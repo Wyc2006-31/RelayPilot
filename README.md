@@ -2,6 +2,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+**Start here:** [first-run local tutorial](docs/preview-quickstart.md) → [optional manual relay](docs/manual-relay.md). The reproducible Gen 1 Preview covers the local example and offline preflight. Full end-to-end automated cloud deployment remains **UNVERIFIED**; these are separate acceptance decisions. See the [Preview scope and draft release notes](docs/release-notes-v0.1.0-alpha.1.md).
+
 ## 1. Introduction
 
 RelayPilot Generation 1 is an experimental multi-AI coding relay: Grok Bot schedules, Codex plans and reviews, cloud WorkBuddy codes and tests, Magpie routes local Codex requests, and GitHub carries code between environments. This candidate is **v0.1.0-alpha.1 — Preview / Experimental**. Publication and a GitHub Release are pending owner approval.

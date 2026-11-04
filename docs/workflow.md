@@ -17,3 +17,11 @@
 6. Codex 接收脱敏后的核验证据，私人保留审查 JSON 和执行状态。人工核验任务与 SHA。REVIEW_SUCCESS 只是解析到决定，也可能是 REQUEST_CHANGES。
 7. REQUEST_CHANGES 按位置、问题、影响、复现、验收条件有限返工。失败、超时、未知阻止推进，保存证据，不无限重试。
 8. 仅继续明确授权的下一项。历史两任务记录在 MINI-004 后停止。完成不代表合并、发布、可靠暂停恢复或全天监控。
+
+## Followable operator path / 可照做的操作路径
+
+The numbered overview above describes roles. Follow [manual-relay.md](manual-relay.md) for concrete account/setup boundaries, a new sandbox task brief, exact Git commands, Draft PR checks, export fallback, Codex input and stopping rules. Start with [the credential-free local tutorial](preview-quickstart.md); no original MINI task needs to be repeated.
+上文为角色概要，具体账号/配置边界、新沙箱任务书、Git 命令、Draft PR 核验、导出备选、Codex 输入与停止规则见人工接力指南。先跑无凭据本机教程，不需要重做原 MINI。
+
+Local executables are ready to exercise. Cloud handoffs require a human; the Grok trigger/result-return contract remains UNVERIFIED and cannot be reconstructed merely by reading a task prompt. Treat missing supported platform access as a boundary of the optional integration, not a reason to claim the local Preview failed or to invent an API.
+本机可执行部分可以直接验收；云交接需人参与，Grok 触发/回传协议仍 UNVERIFIED，不能只凭任务提示词重建。缺平台支持是可选集成边界，不应据此判本机预览失败或虚构 API。

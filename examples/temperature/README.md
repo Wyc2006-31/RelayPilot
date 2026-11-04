@@ -18,3 +18,6 @@ Acceptance: 35 tests, exit 0; first CLI prints `212.0`, exit 0; second prints `0
 
 Optional extension: use routines/README.md and docs/workflow.md to manually request a bounded change through your own Grok/WorkBuddy setup, GitHub sandbox and Codex review. This cloud extension was not freshly executed during preparation and has no exported importable Routine. It can incur charges. Local success does not establish full relay reproducibility.
 可选扩展：在自己的 Grok/WorkBuddy 配置、GitHub 沙箱和 Codex 审查中，按指南人工发起有边界的变更。本次没有新执行该云端扩展，也没有可导入 Routine，可能收费；本机通过不能证明完整接力可复现。
+
+New here? Follow [the complete first-run tutorial](../../docs/preview-quickstart.md) for source access, Python selection, working-directory checks and exit-code inspection. For an optional new sandbox extension, use [manual relay](../../docs/manual-relay.md); the maintainer's private workflow is not an installation dependency.
+初次接触请按完整首次运行教程检查源码访问、Python、工作目录与退出码。可选扩展使用自己的新沙箱，维护者私人工作流不是安装依赖。

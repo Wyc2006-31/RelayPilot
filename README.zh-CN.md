@@ -2,6 +2,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+**从这里开始：**[本机首次运行教程](docs/preview-quickstart.md) → [可选人工接力](docs/manual-relay.md)。第一代预览的可复现范围为本机示例与离线预检；完整端到端自动云部署仍为 **UNVERIFIED**。两项验收独立，详见[预览范围与候选发布说明](docs/release-notes-v0.1.0-alpha.1.md)。
+
 ## 1. 项目介绍
 
 RelayPilot Generation 1 是多 AI 编程接力的实验性工作流：Grok Bot 调度，Codex 规划和审查，云端 WorkBuddy 编程并测试，Magpie 路由本机 Codex 请求，GitHub 负责跨环境代码交接。当前候选为 **v0.1.0-alpha.1 — Preview / Experimental**，公开与 GitHub Release 均等待所有者最终批准。

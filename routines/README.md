@@ -10,3 +10,6 @@ In Grok Bot UI inspect the existing Webhook trigger, action, task/workflow IDs, 
 Task envelope must name scope, baseline SHA, output branch, tests, maximum tasks/rework, and stop conditions. Require real evidence at every handoff. Cloud sandbox and Windows paths differ. If no reliable result-return/resume path is available, mark BLOCKED and retain evidence. Do not reset original state, duplicate a live trigger or claim an imported Routine exists.
 
 任务应明确范围、基线 SHA、输出分支、测试、最大任务/返工次数和停止条件。每次交接保留真实证据，云端路径与 Windows 不同。无可靠回传/恢复路径则阻塞并保存证据，不重置正式状态、不复制运行中触发器、不声称已导入 Routine。
+
+For a new developer, use [manual relay step 7](../docs/manual-relay.md#7-optional-grok-routinewebhook--可选-grok-调度) to identify the missing platform contract and take the manual path if it cannot be configured. There is no `import`, `register-webhook`, callback server or Routine-creation command in this repository. The JSON configuration example is not an exported Routine. Do not substitute an unrelated Grok/xAI API, WorkBuddy schedule or UI automation for evidence of this original trigger.
+新开发者按人工接力第 7 步识别缺失协议，不能配置则走人工路径。仓库没有导入、注册 Webhook、回调服务或创建 Routine 命令；JSON 样例不是 Routine 导出，不以无关 Grok/xAI API、WorkBuddy 定时任务或 UI 自动化冒充原触发证据。
