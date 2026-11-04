@@ -8,8 +8,8 @@
 Install [Python](https://www.python.org/downloads/) 3.11+; Git is optional for ZIP users. Python 3.11 and 3.13 passed the initial Windows/Ubuntu CI. Open a terminal in the parent folder you chose. These are instructions for a **new developer's machine**, not instructions to replace the maintainer's existing checkout.
 安装 Python 3.11+；ZIP 用户不必安装 Git。首轮 Windows/Ubuntu CI 的 3.11 与 3.13 已通过。在自己选定的父目录打开终端，以下用于新开发者，不替换维护者现有工程。
 
-The repository is currently Private. Until public approval, only an explicitly authorized GitHub account can clone/download it. Use GitHub's normal sign-in/credential flow; never embed a token in a clone URL. A 404 before authorization is an access issue, not a Python test failure.
-仓库目前为 Private，公开批准前只有获授权账号能克隆/下载。按 GitHub 正常流程登录，不把 Token 放进 URL；未授权时的 404 是访问问题，不是 Python 测试失败。
+The published Preview can be browsed, cloned or downloaded without signing in. If you are reviewing a Private candidate before publication, explicit repository access is required. Never embed a token in a clone URL. A 404 caused by access restrictions is not a Python test failure.
+已公开的预览版无需登录即可浏览、克隆和下载。若在公开前检查 Private 候选，则需明确的仓库访问权限。不把 Token 放进克隆 URL；访问权限导致的 404 不是 Python 测试失败。
 
 ```sh
 git clone https://github.com/Wyc2006-31/RelayPilot.git RelayPilot

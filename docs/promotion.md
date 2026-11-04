@@ -10,11 +10,16 @@ RelayPilot 第一代探索 Grok Bot 调度、WorkBuddy 编程、Codex 规划审�
 
 ## GitHub description / 仓库简介
 
-Experimental multi-AI coding relay: Grok Bot, Codex, WorkBuddy, Magpie and GitHub. Gen 1 local demo and manual integration guide.
+Open-source multi-agent coding workflow with Grok Bot, Codex, WorkBuddy and GitHub. RelayPilot Gen 1 experimental preview.
 
 ## Suggested topics / 建议 Topics
 
-relaypilot, multi-agent, ai-workflow, codex, workbuddy, automation, python, experimental
+multi-agent, ai-automation, coding-agent, agent-workflow, agent-orchestration, codex, github, automation, python, open-source
+
+## First-generation positioning / 第一代固定定位
+
+RelayPilot Gen 1 is the first-generation Experimental Preview: an open-source reference for architecture, manual handoffs, examples and review. It offers learning and demonstration value today while full unattended cloud automation remains UNVERIFIED. Future versions will continue to refine and update the workflow.
+RelayPilot Gen 1 是第一代实验预览，公开架构、人工接力、示例和审查方法，已具备展示、学习与参考价值；完整无人值守云自动化仍为 UNVERIFIED。它不是最终形态，后续会持续同步优化与更新。
 
 ## 抖音文案
 

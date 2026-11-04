@@ -1,12 +1,20 @@
-# RelayPilot Generation 1
+# RelayPilot Gen 1
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-**Start here:** [first-run local tutorial](docs/preview-quickstart.md) → [optional manual relay](docs/manual-relay.md). The reproducible Gen 1 Preview covers the local example and offline preflight. Full end-to-end automated cloud deployment remains **UNVERIFIED**; these are separate acceptance decisions. See the [Preview scope and draft release notes](docs/release-notes-v0.1.0-alpha.1.md).
+**Open-source multi-agent AI coding workflow · First-generation Experimental Preview**
+
+Learn how planning, cloud implementation, GitHub handoffs and independent review fit together. Start with a small local example, then explore the documented manual relay. Gen 1 is the first version, with further improvements, refinements and workflow updates planned for future releases.
+
+**Start here:** [first-run local tutorial](docs/preview-quickstart.md) → [optional manual relay](docs/manual-relay.md). The reproducible Gen 1 Preview covers the local example and offline preflight. Full end-to-end automated cloud deployment remains **UNVERIFIED**; these are separate acceptance decisions. See the [Preview scope and release notes](docs/release-notes-v0.1.0-alpha.1.md).
 
 ## 1. Introduction
 
-RelayPilot Generation 1 is an experimental multi-AI coding relay: Grok Bot schedules, Codex plans and reviews, cloud WorkBuddy codes and tests, Magpie routes local Codex requests, and GitHub carries code between environments. This candidate is **v0.1.0-alpha.1 — Preview / Experimental**. Publication and a GitHub Release are pending owner approval.
+RelayPilot Generation 1 is an experimental multi-AI coding relay: Grok Bot schedules, Codex plans and reviews, cloud WorkBuddy codes and tests, Magpie routes local Codex requests, and GitHub carries code between environments. This first-generation version is **v0.1.0-alpha.1 — Experimental Preview**. The public package focuses on architecture, process, examples, manual handoffs, review and project organization. It is a learning/reference workflow, not a complete commercial automation product; stable unattended end-to-end cloud operation is not promised.
+
+### Why RelayPilot?
+
+Moving a coding task between AI tools creates practical questions: which files are current, which commit was tested, what evidence supports completion, and who reviews the result? RelayPilot documents explicit handoffs using task scope, exact commits, test output and review decisions. Gen 1 lets you study that process and reproduce the local deliverable before configuring your own platform integrations.
 
 ## 2. Architecture
 
@@ -20,7 +28,7 @@ Grok Bot (Webhook / Routine / orchestration)
 ```
 Windows, Grok Bot cloud, WorkBuddy sandbox and GitHub have separate filesystems. Git commits or verified exports are the handoff; equal filenames do not prove synchronization.
 
-## 3. Implemented in this candidate
+## 3. Included in Gen 1
 
 A preserved temperature conversion module, CLI (including optional `--to`) and 35 original tests; a configurable historical static-review launcher; offline launcher preflight tests; bilingual manual runbooks and non-executable reference templates. The local demo uses only Python standard-library modules. There is no bundled platform API, Webhook server or installed Routine.
 
@@ -41,6 +49,20 @@ python -X utf8 examples/temperature/temperature_cli.py --from c --value 100 --to
 python -X utf8 -B -m unittest discover -s tests -v
 ```
 Expected: 35 example tests pass, CLI prints `212.0`, and 3 offline preflight tests pass. When setting `PYTHONIOENCODING=utf-8`, also set `PYTHONUTF8=1` so child-process decoding agrees. See [installation](docs/installation.md) and [demo](examples/temperature/README.md).
+
+### Project structure
+
+```text
+examples/temperature/  Local converter, CLI and 35 original tests
+scripts/              Configurable historical Codex review launcher
+tests/                Three offline launcher preflight tests
+config/               Documentation-only workflow reference
+routines/             Manual Routine/Webhook integration checklist
+docs/                 Setup, first run, manual relay, evidence and limitations
+.github/              Offline CI and issue templates
+```
+
+Start with `docs/preview-quickstart.md`. Runtime credentials, raw sessions, state and local release audits are excluded from the public files.
 
 ## 7. How it works
 
@@ -80,4 +102,4 @@ Repository-owned distributable code and documentation: [MIT](LICENSE). External 
 
 ## 16. Support
 
-If the project helps you, consider a Star after publication. There are no claimed user, performance, download or Star statistics. This is Generation 1; improvements will continue as evidence becomes available.
+If this workflow helps you learn or build, consider giving RelayPilot a Star and sharing a reproducible improvement or issue. There are no claimed user, performance, download or Star statistics. This is the first generation, not the final form; future versions will continue to refine and update the workflow with evidence.

@@ -1,8 +1,25 @@
-# v0.1.0-alpha.1 — draft notes / 候选说明
+# RelayPilot Gen 1 | First Experimental Preview
 
-RelayPilot Generation 1, Preview / Experimental. Preserves the local temperature example, original 35-test suite and a configurable historical Codex review launcher; adds bilingual relay runbooks and offline preflight checks. The original runtime is preserved separately. Full cloud repro, strict model enforcement and automatic recovery remain unverified or planned. This file is preparation material, not a published GitHub Release.
+**v0.1.0-alpha.1 · Pre-release · First Generation / 第一代实验预览版**
 
-RelayPilot 第一代实验预览，保留本机温度示例、35 项原测试与可配置历史 Codex 审查启动器，增加双语接力指南和离线配置校验。原系统独立保留。完整云端复现、模型强制机制和自动恢复仍待验证或规划。本文件不是已发布 GitHub Release。
+This is RelayPilot's first-generation experimental preview: a real, inspectable workflow reference that can be learned, adapted and reproduced progressively. It includes a local temperature example, the original 35-test suite, a configurable historical Codex review launcher, bilingual setup/manual relay docs and offline preflight checks. The original private runtime remains separate. Full cloud reproducibility, strict model enforcement and automatic recovery remain unverified or planned. Future releases will continue to improve, refine and update this workflow.
+
+这是 RelayPilot 第一代实验预览：真实可学习、可参考、可逐步复现的工作流公开版本，包含本机温度示例、35 项原测试、可配置历史 Codex 审查启动器、双语安装/人工接力文档和离线预检。原私人运行系统独立保留。完整云端复现、模型强制机制与自动恢复仍待验证或规划；后续会继续同步优化、迭代和更新工作流。
+
+## Verified / 已验证内容
+
+- The local example passes 35 original tests; three offline preflight tests check launcher setup without model calls. CLI examples and invalid-input exit codes are checked from a clean source directory.
+- Windows/Ubuntu × Python 3.11/3.13 CI validates these offline suites. This is not cloud-agent or model execution evidence.
+- Exact Git commits, file hashes, test records and review decisions are documented as handoff evidence. Historical MINI records remain historical; no new automated cloud run is claimed.
+
+- 本机示例 35 项原测试与 3 项离线预检通过；干净源码目录核验 CLI 输出和错误退出码。
+- Windows/Ubuntu × Python 3.11/3.13 CI 验证离线测试，不证明云 Agent 或模型调用。
+- 文档以精确提交、文件哈希、测试记录和审查决定解释交接；原 MINI 记录仍为历史证据，不冒充本次云端自动运行。
+
+## Who this is for / 适合谁使用
+
+Developers learning multi-agent collaboration, readers studying an evidence-based coding process, and experimenters who can configure their own tools and manually validate handoffs. Start with the local demo; cloud services are optional and require your own accounts, permissions and cost decisions. This is not a production-ready commercial automation service.
+适合学习多 Agent 协作、研究可核验编程流程，以及能自行配置工具并人工核验交接的开发者。先跑本机示例；云服务是可选扩展，需自己的账号、权限和费用决策。这不是可直接用于生产的商业自动化服务。
 
 ## Preview scope / 第一代预览范围
 
@@ -18,7 +35,7 @@ The optional [manual relay](manual-relay.md) requires separately installed tools
 
 | Decision / 判断 | Gen 1 Preview meaning / 含义 |
 |---|---|
-| A: suitable for experimental open-source Preview review / 适合实验开源预览审核 | A reproducible **local** scope, documented human integration boundaries and a safety-reviewed candidate can be READY_FOR_PREVIEW_REVIEW. Owner approval is still required before Public. / 本机范围可复现、人工集成边界明确且候选安全检查通过，即可交公开前审核，仍须所有者批准。 |
+| A: experimental open-source Preview / 实验开源预览 | The owner has approved publishing the safety-reviewed local/reference scope. This approval does not assert full cloud reproducibility. / 所有者已批准公开经审查的本机与参考流程范围，不代表完整云端可复现。 |
 | B: complete end-to-end automated deployment / 完整端到端自动部署 | **No / UNVERIFIED.** No portable original Routine, independently replayed cloud trigger/return chain, reliable automatic model fallback or recovery deployment. / 尚无原 Routine 可移植导出、新云触发回传链独立复现、可靠自动模型切换和恢复部署。 |
 
 Earlier BLOCKED_FOR_REPRODUCIBILITY reports remain valid historical assessments of **B**. The refined **A** gate narrows the Preview's advertised scope; it does not retroactively claim the original cloud blocker was fixed. Original MINI history is preserved, not rerun or relabeled as a fresh cloud success.

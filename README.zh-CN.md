@@ -1,12 +1,20 @@
-# RelayPilot Generation 1
+# RelayPilot Gen 1
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-**从这里开始：**[本机首次运行教程](docs/preview-quickstart.md) → [可选人工接力](docs/manual-relay.md)。第一代预览的可复现范围为本机示例与离线预检；完整端到端自动云部署仍为 **UNVERIFIED**。两项验收独立，详见[预览范围与候选发布说明](docs/release-notes-v0.1.0-alpha.1.md)。
+**开源多 Agent AI 编程协作工作流 · 第一代实验预览版**
+
+了解规划、云端编程、GitHub 交接与独立审查如何配合。先运行一个小型本机示例，再参考人工接力指南。Gen 1 是第一代，后续会继续同步优化、迭代和更新这个工作流。
+
+**从这里开始：**[本机首次运行教程](docs/preview-quickstart.md) → [可选人工接力](docs/manual-relay.md)。第一代预览的可复现范围为本机示例与离线预检；完整端到端自动云部署仍为 **UNVERIFIED**。两项验收独立，详见[预览范围与发布说明](docs/release-notes-v0.1.0-alpha.1.md)。
 
 ## 1. 项目介绍
 
-RelayPilot Generation 1 是多 AI 编程接力的实验性工作流：Grok Bot 调度，Codex 规划和审查，云端 WorkBuddy 编程并测试，Magpie 路由本机 Codex 请求，GitHub 负责跨环境代码交接。当前候选为 **v0.1.0-alpha.1 — Preview / Experimental**，公开与 GitHub Release 均等待所有者最终批准。
+RelayPilot Generation 1 是多 AI 编程接力的实验性工作流：Grok Bot 调度，Codex 规划和审查，云端 WorkBuddy 编程并测试，Magpie 路由本机 Codex 请求，GitHub 负责跨环境代码交接。第一代版本为 **v0.1.0-alpha.1 — Experimental Preview / 实验预览版**，重点公开架构、流程、示例、人工接力、审查与项目组织方法。它适合学习和参考，不等于完整商业级自动化产品，也未承诺稳定、无人值守的端到端云端运行。
+
+### 为什么做 RelayPilot？
+
+在多个 AI 工具之间交接编程任务时，需要回答：哪份文件最新、哪个提交经过测试、完成结论有什么证据、由谁审查？RelayPilot 用任务范围、精确提交、测试输出和审查决定把交接说清楚。第一代让你先理解方法、复现本机产物，再配置自己的平台集成。
 
 ## 2. 工作流架构
 
@@ -20,7 +28,7 @@ Grok Bot (Webhook / Routine / orchestration)
 ```
 Windows 本机、Grok Bot 云电脑、WorkBuddy 云端沙箱与 GitHub 不共享文件系统。使用精确 Git Commit 或核验后的导出交接，同名文件不代表已经同步。
 
-## 3. 候选实际包含的功能
+## 3. 第一代实际包含的功能
 
 保留温度转换模块、包含可选 `--to` 的 CLI 和 35 项原测试；提供可配置的历史静态审查启动器、离线配置校验测试、中英文手动操作指南与不可执行的参考模板。本机示例只使用 Python 标准库。不包含平台 API、Webhook 服务端或已经安装的 Routine。
 
@@ -41,6 +49,20 @@ python -X utf8 examples/temperature/temperature_cli.py --from c --value 100 --to
 python -X utf8 -B -m unittest discover -s tests -v
 ```
 预期为示例 35 项通过、CLI 输出 `212.0`、离线配置检查 3 项通过。设置 `PYTHONIOENCODING=utf-8` 时同时设置 `PYTHONUTF8=1`，使子进程读取编码一致。详见[安装](docs/installation.md)和[示例](examples/temperature/README.md)。
+
+### 项目结构
+
+```text
+examples/temperature/  本机转换模块、CLI 与 35 项原测试
+scripts/              可配置的历史 Codex 审查启动器
+tests/                三项离线启动前检查
+config/               仅作说明的工作流参考
+routines/             人工 Routine/Webhook 集成核对表
+docs/                 安装、首次运行、人工接力、证据和限制
+.github/              离线 CI 与问题反馈模板
+```
+
+首次使用从 `docs/preview-quickstart.md` 开始。真实凭据、原始会话、状态和本地发布审计不进入公开文件。
 
 ## 7. 工作原理
 
@@ -80,4 +102,4 @@ GBK 解码错误：统一 PYTHONUTF8=1 与 UTF-8 输出。缺少可执行文件�
 
 ## 16. Star 支持
 
-如果项目对你有帮助，公开后欢迎 Star。项目不声称任何用户量、性能、下载量或 Star 数据。这是第一代，后续将依据真实验证持续改进。
+如果这套工作流有助于你学习或开发，欢迎 Star，也欢迎提交可复现的问题和改进。项目不声称任何用户量、性能、下载量或 Star 数据。这是第一代，并非最终形态；后续会依据真实验证持续优化、迭代和同步更新工作流。
